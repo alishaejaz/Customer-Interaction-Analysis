@@ -1,0 +1,86 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.feedback-container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Header */
+.feedback-container header {
+    background-color: #2F4D67;
+    padding: 15px;
+    border-radius: 10px 10px 0 0;
+    color: white;
+}
+
+.feedback-container header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+.feedback-container header p {
+    font-size: 1rem;
+    margin: 5px 0 10px;
+}
+
+/* Feedback Form */
+.feedback-form {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.feedback-form label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+    border-color: #2F4D67;
+    outline: none;
+}
+
+/* Submit Button */
+.submit-btn {
+    background-color: #2F4D67;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #1E364A;
+}

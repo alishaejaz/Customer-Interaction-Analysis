@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Graph</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .chart-container {
+            width: 70%; /* Reduced size */
+            max-width: 450px; /* Reduced maximum width */
+            background: white;
+            padding: 15px; /* Slightly reduced padding */
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2F4D67;
+        }
+    </style>
+</head>
+<body>
+    <div class="chart-container">
+        <h1>Feedback Sentiments</h1>
+        <canvas id="feedbackChart" width="400" height="400"></canvas> <!-- Reduced width/height -->
+    </div>
+
+    <script>
+        // Data for the graph
+        const data = {
+            labels: ['Positive Feedback', 'Negative Feedback'],
+            datasets: [{
+                label: 'Number of Feedback',
+                data: [120, 80], // Replace with actual values
+                backgroundColor: ['#5A7390', '#2F6767'], // Updated colors
+                borderColor: ['#5A7390', '#2F6767'],
+                borderWidth: 1
+            }]
+        };
+
+        // Configuration for the chart
+        const config = {
+            type: 'pie', // Change to 'bar' for a bar chart
+            data: data,
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'Sentiment Analysis Results'
+                    }
+                }
+            }
+        };
+
+        // Render the chart
+        const ctx = document.getElementById('feedbackChart').getContext('2d');
+        new Chart(ctx, config);
+    </script>
+</body>
+</html>

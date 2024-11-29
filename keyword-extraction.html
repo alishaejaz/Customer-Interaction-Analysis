@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyword Extraction</title>
+    <link rel="stylesheet" href="kstyle.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Keyword Extraction Tool</h1>
+            <p>Unlock key insights by analyzing your text with ease.</p>
+        </header>
+
+        <!-- Main Section -->
+        <main>
+            <section class="keyword-extraction">
+                <div class="card">
+                    <h2>Enter Your Text</h2>
+                    <p>Paste the content below and click *Extract Keywords*.</p>
+                    
+                    <textarea id="inputText" name="inputText" placeholder="Paste or type your text here..."></textarea>
+
+                    <button class="extract-btn">Extract Keywords</button>
+                </div>
+
+                <div class="progress-card">
+                    <h2>Processing...</h2>
+                    <div class="progress-bar">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+                <div class="results-card">
+                    <h2>Extracted Keywords</h2>
+                    <ul id="keywordsList">
+                        <!-- Example Results -->
+                        <li>Keyword 1</li>
+                        <li>Keyword 2</li>
+                        <li>Keyword 3</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Keyword Extraction | All Rights Reserved</p>
+        </footer>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

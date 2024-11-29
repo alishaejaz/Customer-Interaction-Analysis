@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perception Trend Analysis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="trendstyle.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <header>
+            <h1>Perception Trend Analysis</h1>
+        </header>
+
+        <main>
+            <!-- Sentiment Trend Section -->
+            <section class="sentiment-trend">
+                <h2>Sentiment Trend Over Time</h2>
+                <div class="chart-container">
+                    <canvas id="sentimentChart"></canvas>
+                </div>
+            </section>
+
+            <!-- Customer Feedback Section -->
+            <section class="feedback-summary">
+                <h2>Customer Feedback Overview</h2>
+                <div class="feedback-container">
+                    <div class="feedback-item positive">
+                        <h3>Positive Feedback</h3>
+                        <p>72%</p>
+                    </div>
+                    <div class="feedback-item neutral">
+                        <h3>Neutral Feedback</h3>
+                        <p>18%</p>
+                    </div>
+                    <div class="feedback-item negative">
+                        <h3>Negative Feedback</h3>
+                        <p>10%</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Perception Score Section -->
+            <section class="perception-score">
+                <h2>Perception Score</h2>
+                <div class="score-container">
+                    <p class="score">85</p>
+                    <span class="score-text">Excellent Customer Perception</span>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Perception Trend Analysis Dashboard</p>
+        </footer>
+    </div>
+
+    <script>
+        // Sentiment Trend Chart Data
+        const ctx = document.getElementById('sentimentChart').getContext('2d');
+        const sentimentChart = new Chart(ctx, {
+            type: 'line',  // Line chart to show the trend
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct'], // X-axis labels
+                datasets: [{
+                    label: 'Positive Sentiment',
+                    data: [60, 65, 70, 72, 78, 80, 85, 88, 90, 92], // Data points for positive sentiment
+                    borderColor: 'rgba(76, 175, 80, 1)',
+                    backgroundColor: 'rgba(76, 175, 80, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Neutral Sentiment',
+                    data: [20, 18, 15, 14, 12, 10, 8, 7, 5, 4], // Data points for neutral sentiment
+                    borderColor: 'rgba(255, 193, 7, 1)',
+                    backgroundColor: 'rgba(255, 193, 7, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }, {
+                    label: 'Negative Sentiment',
+                    data: [20, 17, 15, 14, 10, 8, 7, 5, 4, 3], // Data points for negative sentiment
+                    borderColor: 'rgba(244, 67, 54, 1)',
+                    backgroundColor: 'rgba(244, 67, 54, 0.2)',
+                    fill: true,
+                    tension: 0.4
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true
+                    },
+                    y: {
+                        beginAtZero: true,
+                        max: 100
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
